@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<script src="jquery.cmenu.js"></script>
+	<link rel="stylesheet" type="text/css" href="cmenu.css">
+	<style>
+		.block {
+			width: 200px;
+			height: 200px;
+		}
+		#one {
+			background-color: red;
+		}
+		#two {
+			background-color: green;
+		}
+		#three {
+			background-color: blue;
+		}
+	</style>
+</head>
+<body>
+	<div id="one" class="block"></div>
+	<div id="two" class="block"></div>
+	<div id="three" class="block"></div>
+	<script>
+		$(function(){
+			$('#one').bindMenu([
+				['Новое окно', 'arrow_left', function(e) {alert('hi');}]
+				, ['Выпадающее меню', 'arrow_left', function(){alert('hi');}, [
+					['Back', 'arrow_left', function(){alert('hi');}]
+				]
+				]
+				, '-'
+				, ['Ещё один пункт', 'arrow_right', function(){alert('hi');}]
+			]);
+			$('#two').bindMenu([
+				['Новое окно', 'arrow_left', function(e) {alert('hi');}]
+				, ['Выпадающее меню', 'arrow_left', function(){alert('hi');}, [
+					['Back', 'arrow_left', function(){alert('hi');}]
+				]
+				]
+				, '-'
+				, ['Ещё один пункт', 'arrow_right', function(){alert('hi');}]
+			]);
+			$('#three').bindMenu([
+				['Новое окно', 'arrow_left', function(e) {alert('hi');}]
+				, ['Выпадающее меню', 'arrow_left', function(){alert('hi');}, [
+					['Back', 'arrow_left', function(){alert('hi');}]
+				]
+				]
+				, '-'
+				, ['Ещё один пункт', 'arrow_right', function(){alert('hi');}]
+			]);
+		});
+	</script>
+</body>
+</html>
