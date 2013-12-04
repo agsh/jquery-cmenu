@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
 	<title>Test</title>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 	<script src="jquery.cmenu.js"></script>
@@ -28,7 +29,7 @@
 	<script>
 		$(function(){
 			$('#one').bindMenu([
-				['Новое окно', 'arrow_left', function(e) {alert('hi');}]
+				['Новое окно 1', 'arrow_left', function(e) {alert('1');}]
 				, ['Выпадающее меню', 'arrow_left', function(){alert('hi');}, [
 					['Back', 'arrow_left', function(){alert('hi');}]
 				]
@@ -37,7 +38,7 @@
 				, ['Ещё один пункт', 'arrow_right', function(){alert('hi');}]
 			]);
 			$('#two').bindMenu([
-				['Новое окно', 'arrow_left', function(e) {alert('hi');}]
+				['Новое окно 2', 'arrow_left', function(e) {alert('2');}]
 				, ['Выпадающее меню', 'arrow_left', function(){alert('hi');}, [
 					['Back', 'arrow_left', function(){alert('hi');}]
 				]
@@ -46,7 +47,7 @@
 				, ['Ещё один пункт', 'arrow_right', function(){alert('hi');}]
 			]);
 			$('#three').bindMenu([
-				['Новое окно', 'arrow_left', function(e) {alert('hi');}]
+				['Новое окно 3', 'arrow_left', function(e) {alert('3');}]
 				, ['Выпадающее меню', 'arrow_left', function(){alert('hi');}, [
 					['Back', 'arrow_left', function(){alert('hi');}]
 				]
