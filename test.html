@@ -30,12 +30,30 @@
 		$(function(){
 			$('#one').bindMenu([
 				['Новое окно 1', 'arrow_left', function(e) {alert('1');}]
-				, ['Выпадающее меню', 'arrow_left', function(){alert('hi');}, [
-					['Back', 'arrow_left', function(){alert('hi');}]
-				]
-				]
+				, {
+					caption: 'Выпадающее меню'
+					, icon: 'arrow_left'
+					, execute: function() {
+						alert('hi');
+					}
+					, submenu: [{
+						caption: 'Back'
+						, icon: 'arrow_left'
+						, disabled: true
+						, execute: function() {
+							alert('hi');
+						}
+					}]
+				}
 				, '-'
-				, ['Ещё один пункт', 'arrow_right', function(){alert('hi');}]
+				, {
+					caption: 'Caption'
+					, icon: 'arrow_right'
+					, disabled: true
+					, execute: function() {
+						alert('yo');
+					}
+				}
 			]);
 			$('#two').bindMenu([
 				['Новое окно 2', 'arrow_left', function(e) {alert('2');}]
